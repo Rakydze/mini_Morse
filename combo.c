@@ -9,7 +9,7 @@ int alphabet(char* c) {
 	for (;((*c != ' ') && (*c != '\t') && (*c != '\n')); ++count) {
 		if (count > 3) { 
 			printf("Fail");
-			character = 0;
+			character = -1;
 			break;
 		}
 		/* one block */
@@ -111,7 +111,7 @@ int main() {
 	c = getchar();
 	for(;c != '\n';) {
 		zero = alphabet(&c);
-		if (zero == 0) {
+		if (zero == -1) {
 			break;
 		}
 		putchar(zero);
